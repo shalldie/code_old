@@ -1,7 +1,10 @@
 var ele = document.getElementById('demo');
 
-ele.width = 800;
-ele.height = 500;
+ele.width = 1600;
+ele.height = 1000;
+
+ele.style.width = "800px";
+ele.style.height = "500px";
 
 var ctx = ele.getContext('2d');
 
@@ -14,8 +17,8 @@ var target = circle;
 
 ele.addEventListener('mousemove', function (ex) {
     target = {
-        x: ex.offsetX,
-        y: ex.offsetY
+        x: ex.offsetX * 2,
+        y: ex.offsetY * 2
     };
 });
 
@@ -30,13 +33,13 @@ function draw() {
 
     ctx.clearRect(0, 0, ele.width, ele.height);
     ctx.beginPath();
-    ctx.arc(circle.x, circle.y, 30, 0, Math.PI * 2);
+    ctx.arc(circle.x, circle.y, 60, 0, Math.PI * 2);
     ctx.closePath();
     ctx.fillStyle = "#2ad";
     ctx.fill();
 
     ctx.beginPath();
-    ctx.arc(circle2.x, circle2.y, 10, 0, Math.PI * 2);
+    ctx.arc(circle2.x, circle2.y, 30, 0, Math.PI * 2);
     ctx.closePath();
     ctx.fillStyle = "red";
     ctx.fill();

@@ -15,12 +15,12 @@ class Arrow {
         ctx.rotate(this.angle);
 
         ctx.beginPath();
-        ctx.moveTo(-20, -20);
-        ctx.lineTo(-20, 20);
-        ctx.lineTo(20, 20);
-        ctx.lineTo(40, 0);
-        ctx.lineTo(20, -20);
-        ctx.lineTo(-20, -20);
+        ctx.moveTo(-40, -40);
+        ctx.lineTo(-40, 40);
+        ctx.lineTo(40, 40);
+        ctx.lineTo(80, 0);
+        ctx.lineTo(40, -40);
+        ctx.lineTo(-40, -40);
         ctx.closePath();
 
         ctx.fillStyle = this.color;
@@ -32,17 +32,21 @@ class Arrow {
 
 var ele = document.getElementById('demo');
 
-ele.width = 800;
-ele.height = 500;
+ele.style.width = "800px";
+ele.style.height = "500px";
+
+
+ele.width = 1600;
+ele.height = 1000;
 
 var ctx = ele.getContext('2d');
 
-var arrow = new Arrow(200, 200, "#2ad", Math.PI / 4);
-var arrow2 = new Arrow(400, 200, "#2ad", 0);
+var arrow = new Arrow(400, 400, "#2ad", Math.PI / 4);
+var arrow2 = new Arrow(800, 400, "#2ad", 0);
 
 ele.addEventListener('mousemove', function (ex) {
-    var mx = ex.offsetX;
-    var my = ex.offsetY;
+    var mx = ex.offsetX * 2;
+    var my = ex.offsetY * 2;
 
     var a1 = Math.atan2(my - arrow.y, mx - arrow.x);
 
