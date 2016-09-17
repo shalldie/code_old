@@ -1,0 +1,17 @@
+.ripple{
+    
+}
+
+.ripple.ripple-on .taint{
+    position: absolute;
+    transform: ripple-taint .65s;
+}
+
+@keyframes ripple-taint{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
