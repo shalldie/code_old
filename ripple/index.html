@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="//cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
-
+    <div class="ripple" style="position: relative;margin: 50px auto;width: 300px;height: 200px;border: 1px solid #ddd;"></div>
+    <script>
+        $(".ripple").ripple({
+            color:'#2ad',
+            event:'click'
+        });
+    </script>
 </body>
 
 </html>

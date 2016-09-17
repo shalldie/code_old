@@ -1,17 +1,21 @@
 .ripple{
-    
+    overflow: hidden;
 }
 
 .ripple.ripple-on .taint{
+    border-radius: 100%;
     position: absolute;
-    transform: ripple-taint .65s;
+    animation: ripple-taint .85s;
+    opacity: 0;
 }
 
 @keyframes ripple-taint{
     from{
         transform: scale(0);
+        opacity: .8;
     }
     to{
-        transform: scale(1.5);
+        transform: scale(2.5);
+        opacity: 0;
     }
 }
