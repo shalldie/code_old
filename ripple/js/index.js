@@ -53,9 +53,7 @@ function onRipple(self, opt) {
         self.prepend(taint);
     }
 
-    if (!taint.width() && !taint.height()) { // 定义宽高
-        d = Math.max(self.outerWidth(), self.outerHeight());
-    }
+    d = Math.max(self.outerWidth(), self.outerHeight());  // 定义宽高
 
     if (opt.left !== null && opt.top !== null) { // 定义位置
         x = opt.left - d / 2;
