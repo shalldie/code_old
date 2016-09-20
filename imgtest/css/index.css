@@ -1,6 +1,9 @@
 #demo{
-    margin: 50px auto;
-    width: 178px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 172px;
     height: 200px;
-    background: url(../img/plane.png) no-repeat;
+    margin: 50px auto;
+    background: url(../img/demo.png) no-repeat;
+    background-position: 0 0;
 }
