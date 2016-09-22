@@ -36,8 +36,8 @@ var index = 0;
 var ele = document.getElementById('demo');
 
 
-// setInterval(function () {
-//     ele.style.backgroundPositionX = - index * 172 + 'px';
-//     index++;
-//     if (index >= 11) index = 0;
-// }, 100);
+setInterval(function () {
+    ele.style.backgroundPositionX = - index * 172 + 'px';
+    index++;
+    if (index >= 11) index = 0;
+}, 100);
