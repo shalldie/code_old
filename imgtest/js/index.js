@@ -1,14 +1,14 @@
 
-// var img = new Image();
-// img.src = 'img/plane.png';
+var img = new Image();
+img.src = 'img/hello.png';
 
-// var canvas = document.getElementById('demo');
-// canvas.width = 500;
-// canvas.height = 300;
+var canvas = document.getElementById('demo');
+canvas.width = 172;
+canvas.height = 200;
 
-// canvas.style.cssText = 'margin:50px auto;display:block;';
+canvas.style.cssText = 'margin:50px auto;display:block;';
 
-// var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext('2d');
 
 // var sWid = 60;
 // var sHei = 180;
@@ -36,8 +36,30 @@ var index = 0;
 var ele = document.getElementById('demo');
 
 
-setInterval(function () {  
+
+setInterval(function () {
     ele.style.backgroundPositionX = - index * 172 + 'px';
     index++;
     if (index >= 11) index = 0;
 }, 100);
+
+var speed = 60;
+var timeStart = +new Date;
+
+function drawImage() {
+    ctx.clearRect(0, 0, 172, 200);
+    var timeEnd = +new Date;
+    var timeDiff = timeEnd - timeStart;
+    index = ~~(timeDiff / speed);
+    index = index % 11;
+    ctx.drawImage(img, 172 * index, 0, 172, 200, 0, 0, 172, 200);
+    requestAnimationFrame(drawImage);
+}
+drawImage();
+
+
+// setInterval(function () {
+//     ele.style.backgroundPositionX = - index * 172 + 'px';
+//     index++;
+//     if (index >= 11) index = 0;
+// }, 100);
