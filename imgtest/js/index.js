@@ -36,7 +36,7 @@ var index = 0;
 var ele = document.getElementById('demo');
 
 
-setInterval(function () {
+setInterval(function () {  
     ele.style.backgroundPositionX = - index * 172 + 'px';
     index++;
     if (index >= 11) index = 0;
