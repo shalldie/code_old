@@ -1,9 +1,9 @@
-#demo{
+#demo {
     border: 1px solid #ddd;
     box-sizing: border-box;
     width: 172px;
     height: 200px;
     margin: 50px auto;
-    background: url(../img/777.png) no-repeat;
+    background: url(../img/planeresult.png) no-repeat;
     background-position: 0 0;
 }
