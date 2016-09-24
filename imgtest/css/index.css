@@ -6,4 +6,5 @@
     margin: 50px auto;
     /*background: url(../img/result.png) no-repeat;
     background-position: 0 0;*/
+    transform: scale(0.5);
 }
