@@ -1,6 +1,6 @@
 
 var img = new Image();
-img.src = 'img/hello.png';
+img.src = 'img/result.png';
 
 var canvas = document.getElementById('demo');
 canvas.width = 172;
@@ -31,17 +31,23 @@ var ctx = canvas.getContext('2d');
 //     ctx.drawImage(image, sX, sY, sWid, sHei, tX + offX, tY, tWid - offX * 2, tHei);
 // }
 
-var index = 0;
+// var index = 0;
 
-var ele = document.getElementById('demo');
+// var ele = document.getElementById('demo');
 
 
 
-setInterval(function () {
-    ele.style.backgroundPositionX = - index * 172 + 'px';
-    index++;
-    if (index >= 11) index = 0;
-}, 100);
+// setInterval(function () {
+//     ele.style.backgroundPositionX = - index * 172 + 'px';
+//     index++;
+//     if (index >= 11) index = 0;
+// }, 100);
+
+// function setNext() {
+//     ele.style.cssText = `background-position:${-index * 172}px 0`;
+//     index++;
+//     if (index >= 11) index = 0;
+// }
 
 var speed = 60;
 var timeStart = +new Date;
