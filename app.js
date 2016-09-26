@@ -1,2 +1,1 @@
-require('./footer/app');
-
+// require('./footer/app');
