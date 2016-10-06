@@ -1,0 +1,13 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#demo{
+    /*border: 1px dashed #2ad;*/
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    box-shadow: 0 0 52px #2ad;
+}
