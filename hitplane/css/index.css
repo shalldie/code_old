@@ -1,0 +1,20 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#demo{
+    border: 1px dashed #2ad;
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    /*box-shadow: 0 0 52px #2ad;*/
+    box-sizing: border-box;
+}
+
+.btn-wrap{
+    width: 500px;
+    margin: 10px auto;
+}

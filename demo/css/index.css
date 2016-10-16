@@ -6,6 +6,7 @@ body{
 
 #demo{
     /*border: 1px dashed #2ad;*/
+    display: block;
     width: 500px;
     height: 300px;
     margin: 50px auto;
