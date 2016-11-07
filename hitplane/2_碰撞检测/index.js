@@ -93,7 +93,9 @@ function checkImpact(obj1, obj2, canvas) {
 }
 
 function getDirection(ball1, ball2) {
+    
     // 参考： http://www.cnblogs.com/axes/p/3513343.html
+
     var rc = Math.sqrt(Math.pow(ball1.x - ball2.x, 2) + Math.pow(ball1.y - ball2.y, 2));
 
     var ax = ((ball1.speedX - ball2.speedX) * Math.pow((ball1.x - ball2.x), 2) + (ball1.speedY - ball2.speedY) * (ball1.x - ball2.x) * (ball1.y - ball2.y)) / Math.pow(rc, 2);
