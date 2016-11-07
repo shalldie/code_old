@@ -1,0 +1,4 @@
+<view class="time-diff">
+    {{time}}
+</view>
+<button bindtap="setTime">Try</button>
