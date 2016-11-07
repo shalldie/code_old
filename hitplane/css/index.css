@@ -10,8 +10,8 @@ body{
     width: 500px;
     height: 300px;
     margin: 50px auto;
-    /*box-shadow: 0 0 52px #2ad;*/
     box-sizing: border-box;
+    /*box-shadow: 0 0 52px #2ad;*/
 }
 
 .btn-wrap{
