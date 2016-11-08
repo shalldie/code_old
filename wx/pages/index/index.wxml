@@ -8,6 +8,6 @@
     <text class="user-motto">{{welcome}}</text>
   </view>
   <view class="view-demo">
-    <navigator class="link-demo" url="../control/index">To control Page</navigator>
+    <navigator class="link-demo" url="../control/control">To control Page</navigator>
   </view>
 </view>
