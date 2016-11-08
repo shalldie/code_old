@@ -1,3 +1,5 @@
+var ajax=require('../../utils/ajax');
+
 Page({
   data: {
     imgUrls: [
@@ -11,26 +13,17 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    fileLength:0
   },
-  changeIndicatorDots: function(e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay: function(e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function(e) {
-    this.setData({
-      duration: e.detail.value
-    })
+  ajaxFile:function(){
+    var that=this;
+    ajax.get('http://cdn.bootcss.com/jquery/1.12.4/jquery.js')
+        .then(content=>{
+          console.log(content);
+            that.setData({
+              fileLength:content.length
+            });
+        });
   }
 });
