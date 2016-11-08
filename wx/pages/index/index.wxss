@@ -21,9 +21,12 @@
 }
 
 .view-demo{
-  margin-top: 20px;
+  margin-top: 60rpx;
 }
 
-.view-demo button{
-  font-size: 16px;
+.link-demo{
+  color: #2ad;
+  font-size: 30rpx;
+  padding: 20rpx;
+  border: 1px dashed #2ad;
 }

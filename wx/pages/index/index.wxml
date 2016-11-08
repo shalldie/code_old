@@ -8,6 +8,6 @@
     <text class="user-motto">{{welcome}}</text>
   </view>
   <view class="view-demo">
-    <button bindtap="jumptodemo">To Demo Page</button>
+    <navigator class="link-demo" url="../control/index">To control Page</navigator>
   </view>
 </view>

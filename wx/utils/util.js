@@ -1,8 +1,8 @@
 /**
  * 时间格式化
  */
-function dateFormat(date,pattern){
-  var dict = {
+function dateFormat(date, pattern) {
+    var dict = {
         "y+": date.getFullYear(),
         "M+": date.getMonth() + 1,
         "d+": date.getDate(),
@@ -21,5 +21,5 @@ function dateFormat(date,pattern){
 }
 
 module.exports = {
-  dateFormat:dateFormat
+    dateFormat: dateFormat
 };

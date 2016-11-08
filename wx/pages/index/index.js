@@ -14,20 +14,6 @@ Page({
       url: '../logs/logs'
     });
   },
-  jumptodemo:function(){
-    wx.navigateTo({
-      url: '../demo/demo',
-      success: function(res){
-        // success
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
-  },
   onLoad: function () {
     console.log('onLoad');
     var that = this;
