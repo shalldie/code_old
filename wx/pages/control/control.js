@@ -20,7 +20,6 @@ Page({
     var that=this;
     ajax.get('http://cdn.bootcss.com/jquery/1.12.4/jquery.js')
         .then(content=>{
-          console.log(content);
             that.setData({
               fileLength:content.length
             });

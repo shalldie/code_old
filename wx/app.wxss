@@ -1,5 +1,42 @@
-/**app.wxss**/
+page {
+  height: 100%;
+}
+
 .container {
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+/**app.wxss**/
+/*.container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,10 +44,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
-
-.flex{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
+} */

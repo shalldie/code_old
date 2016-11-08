@@ -13,7 +13,8 @@
     </swiper-item>
   </block>
 </swiper>
-<view class="container">
+<view class="container flex-column">
   <text>{{fileLength}}</text>
-  <button type="primary" bindtap="ajaxFile">发送请求</button>
+  <button class="w100" type="primary" bindtap="ajaxFile">发送请求</button>
+  <button class="w100" type="primary" bindtap="ajaxFile">发送请求</button>
 </view>
