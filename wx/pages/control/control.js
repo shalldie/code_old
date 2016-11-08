@@ -24,5 +24,9 @@ Page({
               fileLength:content.length
             });
         });
+    // ajax.jsonp('http://mini.eastday.com/rmrili_wannianli/wannianli2029.js',
+    // {
+    //   callback:'wannianli2029'
+    // }).then(result=>console.log(result));
   }
 });
