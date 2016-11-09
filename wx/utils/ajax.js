@@ -2,27 +2,57 @@
 
 require('../polyfill/promise');
 
-console.log(Promise);
+// 接口类型
+var methodArr=['OPTIONS',
+                'GET',
+                'HEAD',
+                'POST',
+                'PUT',
+                'DELETE',
+                'TRACE',
+                'CONNECT'];
 
-function makeRequest(url,data,ifJSON,method){
-    return new Promise((res,rej)=>{
-        wx.request({
-            url: url,
-            method:method,
-            data: data||{},
-            header: {
-                'Content-Type': 'application/json'
-            },
-            success: function(result) {
-                var info= ifJSON?JSON.parse(result.data):result.data;
-                res(info);
-            },
-            fail:function(err){
-                rej(err);
-            }
-        });
-    });
-}
+methodArr.forEach(n=>{
+    module.exports[n.toLowerCase()]=function(url,data,ifJSON){
+            return new Promise((res,rej)=>{
+                wx.request({
+                    url: url,
+                    method:n,
+                    data: data||{},
+                    header: {
+                        'Content-Type': 'application/json'
+                    },
+                    success: function(result) {
+                        var info= ifJSON?JSON.parse(result.data):result.data;
+                        res(info);
+                    },
+                    fail:function(err){
+                        rej(err);
+                    }
+                });
+            });
+    };
+});
+
+// function makeRequest(url,data,ifJSON,method){
+//     return new Promise((res,rej)=>{
+//         wx.request({
+//             url: url,
+//             method:method,
+//             data: data||{},
+//             header: {
+//                 'Content-Type': 'application/json'
+//             },
+//             success: function(result) {
+//                 var info= ifJSON?JSON.parse(result.data):result.data;
+//                 res(info);
+//             },
+//             fail:function(err){
+//                 rej(err);
+//             }
+//         });
+//     });
+// }
 
 function makeJsonp(url,data){
     data=data||{};   
@@ -53,12 +83,6 @@ function makeJsonp(url,data){
 }
 
 
-module.exports={
-    get:function(url,data,ifJSON){
-        return makeRequest(url,data,ifJSON,'GET');
-    },
-    post:function(url,data,ifJSON){
-        return makeRequest(url,data,ifJSON,'POST');
-    },
-    jsonp:makeJsonp
-};
+// module.exports={
+//     jsonp:makeJsonp
+// };

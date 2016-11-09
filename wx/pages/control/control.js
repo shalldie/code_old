@@ -18,7 +18,7 @@ Page({
   },
   ajaxFile:function(){
     var that=this;
-    ajax.get('http://cdn.bootcss.com/jquery/1.12.4/jquery.js')
+    ajax.get('https://cdn.bootcss.com/jquery/1.12.2/jquery.js')
         .then(content=>{
             that.setData({
               fileLength:content.length
