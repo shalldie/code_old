@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container flex-column">
+<view class="container flex-column align-center">
   <view 
     bindtap="bindViewTap" 
     class="flex-column" 

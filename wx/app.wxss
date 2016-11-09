@@ -1,16 +1,19 @@
+/*页面*/
 page {
   height: 100%;
 }
 
+/*容器*/
 .container {
   width: 690rpx;
   margin: 0 auto;
 }
 
+/*弹性盒子*/
 .flex {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: space-between;
   box-sizing: border-box;
 }
@@ -18,11 +21,24 @@ page {
 .flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: space-between;
   box-sizing: border-box;
 }
 
+.align-center{
+  align-items: center;
+}
+
+.flex1{
+  flex:1;
+}
+
+.flex2{
+  flex: 2;
+}
+
+/*其它辅助类*/
 .text-center{
   text-align: center;
 }
@@ -34,14 +50,3 @@ page {
 .w100 {
   width: 100%;
 }
-
-/**app.wxss**/
-/*.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} */

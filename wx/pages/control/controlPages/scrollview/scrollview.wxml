@@ -1,0 +1,11 @@
+<view class="h100">
+    <scroll-view 
+        class="header flex"
+        scroll-x="true"
+        style="width:680rpx;"
+        >
+        <block wx:for="{{menus}}">
+            <view class="menu-item flex1">{{item}}</view>
+        </block>
+    </scroll-view>
+</view>

@@ -2,6 +2,8 @@
 
 require('../polyfill/promise');
 
+console.log(Promise);
+
 function makeRequest(url,data,ifJSON,method){
     return new Promise((res,rej)=>{
         wx.request({

@@ -1,20 +1,30 @@
-<swiper style="height:300rpx;"
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" 
-  interval="{{interval}}" 
-  duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key="item">
-    <swiper-item>
-        <image src="{{item}}" 
-        class="slide-image" 
-        mode="scaleToFill"
-        style="width:100%;height:100%"
-        />
-    </swiper-item>
-  </block>
-</swiper>
-<view class="container flex-column">
-  <text>{{fileLength}}</text>
-  <button class="w100" type="primary" bindtap="ajaxFile">发送请求</button>
-  <button class="w100" type="primary" bindtap="ajaxFile">发送请求</button>
+<view class="flex-column h100">
+  <view style="height:300rpx;">
+    <swiper class="h100"
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}" 
+      duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+            <image src="{{item}}" 
+            class="slide-image" 
+            mode="scaleToFill"
+            style="width:100%;height:100%"
+            />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="flex1">
+    <view 
+    class="container flex-column align-center flex1">
+      <text>{{fileLength}}</text>
+      <button class="w100" type="primary" bindtap="ajaxFile">发送请求</button>
+
+      <navigator class="w100" url="controlPages/scrollview/scrollview">
+        <button class="w100" type="default">scrollview</button>
+      </navigator>
+    </view>
+  </view>  
 </view>

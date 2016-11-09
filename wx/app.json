@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/control/control"
+    "pages/control/control",
+    "pages/control/controlPages/scrollview/scrollview"
   ],
   "window":{
     "backgroundTextStyle":"light",
