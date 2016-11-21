@@ -1,11 +1,17 @@
-const task = require('mini-task');
+require('babel-polyfill');
 
-let que = task.queue().dequeue();
-
-
-
-for (let i = 0; i < 10; i++) {
-    que.will(n => conosle.log(new Date().getSeconds())).delay(1000);
+let work = async function () {
+    console.log(new Date().getSeconds());
+    await sleep(1000);
+    console.log(new Date().getSeconds());
 }
 
-que.catch(err => console.log(err));
+function sleep(delay) {
+    return new Promise((res, rej) => {
+        setTimeout(function () {
+            res();
+        }, delay);
+    });
+}
+
+work();
