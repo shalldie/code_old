@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Demo from './components/demo';
- 
+import NameList from './components/NameList';
+
 
 render(
-    <Demo />,
+    <NameList />,
     document.getElementById('demo')
 );
