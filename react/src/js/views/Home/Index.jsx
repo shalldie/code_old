@@ -9,7 +9,10 @@ export default class Index extends React.Component {
 
     render() {
         return (
-            <h4>Home Index Page</h4>
+            <div>
+                <h4>Home Index Page</h4>
+                <h2>{this.props.name}</h2>
+            </div>
         );
     }
 }
