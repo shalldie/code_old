@@ -6,7 +6,7 @@ export default class Route extends React.Component {
         return (
             <div>
                 <ul>
-                    <li><Link to="/" name={'hello'}>首页</Link></li>
+                    <li><Link to={{ pathname: '/', state: { name: 'tom' } }}>首页</Link></li>
                     <li><Link to="/home/about">关于</Link></li>
                 </ul>
                 {this.props.children}
