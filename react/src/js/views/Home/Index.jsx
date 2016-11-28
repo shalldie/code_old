@@ -11,7 +11,7 @@ export default class Index extends React.Component {
         return (
             <div>
                 <h4>Home Index Page</h4>
-                <h2>{history.state}</h2>
+                <p>This is the index page.</p>
             </div>
         );
     }
