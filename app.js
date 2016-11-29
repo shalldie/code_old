@@ -8,5 +8,8 @@ function getResult(word,delay){
 
 
 (async function(){
-    let pro=Promise.all(getResult('hello',1000),getResult('world',2000));
+    // let pro=Promise.all(getResult('hello',1000),getResult('world',2000)).then(n=>n);
+    let result = await getResult('hello',1000);
+    console.log(result);
+    
 })();
