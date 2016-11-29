@@ -1,17 +1,12 @@
-require('babel-polyfill');
-
-let work = async function () {
-    console.log(new Date().getSeconds());
-    await sleep(1000);
-    console.log(new Date().getSeconds());
-}
-
-function sleep(delay) {
-    return new Promise((res, rej) => {
-        setTimeout(function () {
-            res();
-        }, delay);
+function getResult(word,delay){
+    return new Promise(res=>{
+        setTimeout(function(){
+            res(word);
+        },delay);
     });
 }
 
-work();
+
+(async function(){
+    let pro=Promise.all(getResult('hello',1000),getResult('world',2000));
+})();
