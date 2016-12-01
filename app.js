@@ -13,3 +13,4 @@ function getResult(word,delay){
     console.log(result);
     
 })();
+
