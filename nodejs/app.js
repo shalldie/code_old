@@ -1,9 +1,18 @@
-console.log('hello world');
 
-console.log('hello world');
 
-// test vscode tips
+function sleep(delay) {
+    return new Promise(res => {
+        setTimeout(function () {
+            res();
+        }, delay);
+    });
+}
 
-document.write('hello world');
+async function work() {
+}
 
-console.log('hello world');
+(async () => {
+    console.time(1);
+    await sleep(1000);
+    console.timeEnd(1);
+})();
