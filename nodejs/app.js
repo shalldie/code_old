@@ -8,9 +8,6 @@ function sleep(delay) {
     });
 }
 
-async function work() {
-}
-
 (async () => {
     console.time(1);
     await sleep(1000);
