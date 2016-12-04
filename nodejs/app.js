@@ -10,6 +10,9 @@ function sleep(delay) {
 
 (async () => {
     console.time(1);
-    await sleep(1000);
+    let delay1 = sleep(1000);
+    let delay2 = sleep(2000);
+    await delay1;
+    await delay2;
     console.timeEnd(1);
 })();
