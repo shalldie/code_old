@@ -1,18 +1,13 @@
+const events = require('events');
 
+let emitter = new events.EventEmitter();
 
-function sleep(delay) {
-    return new Promise(res => {
-        setTimeout(function () {
-            res();
-        }, delay);
-    });
-}
+emitter.on('adduser', () => {
+    console.log(`添加了一个用户...`);
+});
 
-(async () => {
-    console.time(1);
-    let delay1 = sleep(1000);
-    let delay2 = sleep(2000);
-    await delay1;
-    await delay2;
-    console.timeEnd(1);
-})();
+emitter.on('adduser', (name, age) => {
+    console.log(`用户名：${name}，年龄：${age}`);
+});
+
+emitter.emit('adduser', 'tom', 12);
