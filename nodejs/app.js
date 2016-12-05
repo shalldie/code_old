@@ -1,13 +1,13 @@
-const events = require('events');
+const fs = require('fs');
 
-let emitter = new events.EventEmitter();
+let data = '';
 
-emitter.on('adduser', () => {
-    console.log(`添加了一个用户...`);
+let stream = fs.createReadStream('./hello.txt', 'utf8');
+
+stream.on('data', function (result) {
+    data += result;
 });
 
-emitter.on('adduser', (name, age) => {
-    console.log(`用户名：${name}，年龄：${age}`);
+stream.on('end', function () {
+    console.log(data);
 });
-
-emitter.emit('adduser', 'tom', 12);
